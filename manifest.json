@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Render Service → Events Redirect",
+  "version": "1.0",
+  "description": "Redirects Render web service dashboard pages straight to their Events tab.",
+  "permissions": ["declarativeNetRequest", "webNavigation"],
+  "host_permissions": ["https://dashboard.render.com/*"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

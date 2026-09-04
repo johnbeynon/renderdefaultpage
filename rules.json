@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://dashboard.render.com/web/\\1/events"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://dashboard\\.render\\.com/web/(srv-[a-zA-Z0-9]+)/?$",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
